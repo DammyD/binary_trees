@@ -1,4 +1,4 @@
-#include "binary_tress.h"
+#include "binary_trees.h"
 
 /**
  * node_height - Computes the height of a binary tree
