@@ -1,17 +1,17 @@
 #include "binary_trees.h"
 
 /**
- * node_height - Computes the height of a binary tree
- * @tree: The binary tree
- * @n: The accumulated height
- * @height: The maximum height of the binary tree
+ * node_height - Computes the height of a binary tree's node.
+ * @tree: The binary tree.
+ * @n: The accumulated height.
+ * @height: A pointer to the maximum height in the node's tree.
  */
 
 void node_height(const binary_tree_t *tree, size_t n, size_t *height)
 {
 	if (tree != NULL)
 	{
-		if ((trees->left == NULL) && (tree->right == NULL))
+		if ((tree->left == NULL) && (tree->right == NULL))
 		{
 			if (n > *height)
 			{
@@ -20,7 +20,6 @@ void node_height(const binary_tree_t *tree, size_t n, size_t *height)
 		}
 		else
 		{
-
 			node_height(tree->left, n + 1, height);
 			node_height(tree->right, n + 1, height);
 		}
@@ -28,9 +27,9 @@ void node_height(const binary_tree_t *tree, size_t n, size_t *height)
 }
 
 /**
- * binary_tree_height - Measures the height of a binary tree
- * @tree: The tree to measure the height
- * Return: The height of the binary tree
+ * binary_tree_height - Computes the height of a binary tree.
+ * @tree: The binary tree.
+ * Return: The height of the given binary tree.
  */
 
 size_t binary_tree_height(const binary_tree_t *tree)
